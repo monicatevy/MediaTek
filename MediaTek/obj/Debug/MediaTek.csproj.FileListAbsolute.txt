@@ -1,0 +1,10 @@
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.csprojAssemblyReference.cache
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.Properties.Resources.resources
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.csproj.GenerateResource.cache
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.csproj.CoreCompileInputs.cache
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\MediaTek.exe.config
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\MediaTek.exe
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\MediaTek.pdb
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.exe
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.pdb
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.vue.Login.resources

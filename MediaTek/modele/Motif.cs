@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MediaTek.modele
+﻿namespace MediaTek.modele
 {
-    class Motif
+    public class Motif
     {
     }
 }

@@ -1,16 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediaTek.vue;
 
 namespace MediaTek.controleur
 {
+    /// <summary>
+    /// Gère les intéractions entre le modèle et la vue
+    /// </summary>
     public class Controle
     {
+        /// <summary>
+        /// Ouverture de la fenêtre
+        /// </summary>
         public Controle()
         {
-
+            (new Login(this)).ShowDialog();
         }
     }
 }
