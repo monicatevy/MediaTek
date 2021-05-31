@@ -10,7 +10,7 @@ namespace MediaTek.vue
     /// <summary>
     /// Fenêtre d'affichage des personnels et de leurs informations
     /// </summary>
-    public partial class GestionPersonnel : Form
+    public partial class frmGestionPersonnel : Form
     {
         /// <summary>
         /// Instance du controleur
@@ -49,7 +49,7 @@ namespace MediaTek.vue
         /// Récupération du controleur
         /// </summary>
         /// <param name="controle"></param>
-        public GestionPersonnel(Controle controle)
+        public frmGestionPersonnel(Controle controle)
         {
             InitializeComponent();
             this.controle = controle;

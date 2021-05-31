@@ -1,6 +1,7 @@
 ﻿using MediaTek.dal;
 using MediaTek.modele;
 using MediaTek.vue;
+using System;
 using System.Collections.Generic;
 
 namespace MediaTek.controleur
@@ -11,11 +12,38 @@ namespace MediaTek.controleur
     public class Controle
     {
         /// <summary>
+        /// Fenêtre d'authentification
+        /// </summary>
+        private frmLogin frmLogin;
+
+        /// <summary>
         /// Ouverture de la fenêtre
         /// </summary>
         public Controle()
         {
-            (new GestionPersonnel(this)).ShowDialog();
+            frmLogin = new frmLogin(this);
+            frmLogin.ShowDialog();
+        }
+
+        /// <summary>
+        /// Demande la vérification de l'authentification
+        /// Si login/pwd sont corrects, ouverture de la fenêtre principale
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="pwd"></param>
+        /// <returns></returns>
+        public Boolean Authentification(string login, string pwd)
+        {
+            if (AccesDonnees.Authentification(login, pwd))
+            {
+                frmLogin.Hide();
+                (new frmGestionPersonnel(this)).ShowDialog();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>

@@ -20,6 +20,34 @@ namespace MediaTek.dal
         private static string connectionString = "Server=localhost;Database=mediatek86;User Id=mediatekadmin;Password=8Medi@Tek6$m;";
 
         /// <summary>
+        /// Authentification (login/pwd)
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="pwd"></param>
+        /// <returns></returns>
+        public static Boolean Authentification(string login, string pwd)
+        {
+            string req = "SELECT * FROM responsable ";
+            req += "WHERE login = @login AND pwd = SHA2(@pwd, 256);";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@login", login);
+            parameters.Add("@pwd", pwd);
+            ConnexionBDD curseur = ConnexionBDD.GetInstance(connectionString);
+            curseur.ReqSelect(req, parameters);
+
+            if (curseur.Read())
+            {
+                curseur.Close();
+                return true;
+            }
+            else
+            {
+                curseur.Close();
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Récupère et retourne les personnels provenant de la BDD
         /// </summary>
         /// <returns>liste des personnels</returns>
@@ -31,7 +59,7 @@ namespace MediaTek.dal
             req += "ORDER BY nom, prenom;";
 
             ConnexionBDD curseur = ConnexionBDD.GetInstance(connectionString);
-            curseur.ReqSelect(req);
+            curseur.ReqSelect(req, null);
             while (curseur.Read())
             {
                 
@@ -59,7 +87,7 @@ namespace MediaTek.dal
             List<Service> lesServices = new List<Service>();
             string req = "SELECT * FROM service ORDER BY nom;";
             ConnexionBDD curseur = ConnexionBDD.GetInstance(connectionString);
-            curseur.ReqSelect(req);
+            curseur.ReqSelect(req, null);
             while (curseur.Read())
             {
                 Service service = new Service((int)curseur.Field("idservice"),
@@ -148,7 +176,7 @@ namespace MediaTek.dal
             req += "WHERE idpersonnel = "+ idpersonnel + " ORDER BY datedebut DESC;";
 
             ConnexionBDD curseur = ConnexionBDD.GetInstance(connectionString);
-            curseur.ReqSelect(req);
+            curseur.ReqSelect(req, null);
             while (curseur.Read())
             {
 
@@ -175,7 +203,7 @@ namespace MediaTek.dal
             List<Motif> lesMotifs = new List<Motif>();
             string req = "SELECT * FROM motif ORDER BY libelle;";
             ConnexionBDD curseur = ConnexionBDD.GetInstance(connectionString);
-            curseur.ReqSelect(req);
+            curseur.ReqSelect(req, null);
             while (curseur.Read())
             {
                 Motif motif = new Motif((int)curseur.Field("idmotif"), (string)curseur.Field("libelle"));

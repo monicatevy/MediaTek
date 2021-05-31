@@ -89,11 +89,20 @@ namespace MediaTek.connexion
         /// Exécution d'une requête type "SELECT" et valorisation du curseur
         /// </summary>
         /// <param name="stringQuery">requête "SELECT"</param>
-        public void ReqSelect(string stringQuery)
+        /// <param name="parameters"></param>
+        public void ReqSelect(string stringQuery, Dictionary<string, object> parameters)
         {
             try
             {
                 command = new MySqlCommand(stringQuery, connection);
+                if (!(parameters is null))
+                {
+                    foreach (KeyValuePair<string, object> parameter in parameters)
+                    {
+                        command.Parameters.Add(new MySqlParameter(parameter.Key, parameter.Value));
+                    }
+                }
+                command.Prepare();
                 reader = command.ExecuteReader();
             }
             catch (Exception e)

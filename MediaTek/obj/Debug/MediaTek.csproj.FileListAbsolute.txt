@@ -7,7 +7,6 @@ C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\MediaTek.e
 C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\MediaTek.pdb
 C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.exe
 C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.pdb
-C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.vue.Login.resources
 C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\Google.Protobuf.dll
 C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\K4os.Compression.LZ4.dll
@@ -30,6 +29,7 @@ C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\System.Buf
 C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\System.Memory.xml
 C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.vue.GestionPersonnel.resources
 C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.csproj.CopyComplete
 C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\MediaTek.xml
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.vue.frmGestionPersonnel.resources
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.vue.frmLogin.resources

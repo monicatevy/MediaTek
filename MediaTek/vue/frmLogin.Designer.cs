@@ -1,6 +1,6 @@
 ﻿namespace MediaTek.vue
 {
-    partial class Login
+    partial class frmLogin
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -50,7 +50,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
             // 
             // panel1
             // 
@@ -61,15 +60,16 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtLogin);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(81, 285);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(459, 418);
             this.panel1.TabIndex = 1;
-            this.panel1.UseWaitCursor = true;
             // 
             // btnSeConnecter
             // 
             this.btnSeConnecter.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnSeConnecter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeConnecter.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeConnecter.ForeColor = System.Drawing.Color.White;
             this.btnSeConnecter.Location = new System.Drawing.Point(58, 300);
@@ -78,11 +78,12 @@
             this.btnSeConnecter.TabIndex = 5;
             this.btnSeConnecter.Text = "Se connecter";
             this.btnSeConnecter.UseVisualStyleBackColor = false;
-            this.btnSeConnecter.UseWaitCursor = true;
+            this.btnSeConnecter.Click += new System.EventHandler(this.btnSeConnecter_Click);
             // 
             // chkboxPwd
             // 
             this.chkboxPwd.AutoSize = true;
+            this.chkboxPwd.Cursor = System.Windows.Forms.Cursors.Default;
             this.chkboxPwd.Font = new System.Drawing.Font("Yu Gothic UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkboxPwd.Location = new System.Drawing.Point(58, 224);
             this.chkboxPwd.Name = "chkboxPwd";
@@ -90,7 +91,7 @@
             this.chkboxPwd.TabIndex = 4;
             this.chkboxPwd.Text = "Afficher le mot de passe";
             this.chkboxPwd.UseVisualStyleBackColor = true;
-            this.chkboxPwd.UseWaitCursor = true;
+            this.chkboxPwd.CheckedChanged += new System.EventHandler(this.chkboxPwd_CheckedChanged);
             // 
             // txtPwd
             // 
@@ -98,7 +99,6 @@
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(350, 31);
             this.txtPwd.TabIndex = 3;
-            this.txtPwd.UseWaitCursor = true;
             // 
             // label3
             // 
@@ -109,7 +109,6 @@
             this.label3.Size = new System.Drawing.Size(159, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mot de passe";
-            this.label3.UseWaitCursor = true;
             // 
             // txtLogin
             // 
@@ -117,7 +116,6 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(350, 31);
             this.txtLogin.TabIndex = 1;
-            this.txtLogin.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -128,21 +126,23 @@
             this.label2.Size = new System.Drawing.Size(200, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nom d\'utilisateur";
-            this.label2.UseWaitCursor = true;
             // 
-            // Login
+            // frmLogin
             // 
+            this.AcceptButton = this.btnSeConnecter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(621, 764);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "Login";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MediaTek Management";
-            this.UseWaitCursor = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

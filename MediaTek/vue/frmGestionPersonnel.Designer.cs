@@ -3,7 +3,7 @@
     /// <summary>
     /// Classe Designer : création des composants graphiques
     /// </summary>
-    partial class GestionPersonnel
+    partial class frmGestionPersonnel
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -186,7 +186,7 @@
             // lblGauche
             // 
             this.lblGauche.AutoSize = true;
-            this.lblGauche.BackColor = System.Drawing.Color.Indigo;
+            this.lblGauche.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.lblGauche.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGauche.ForeColor = System.Drawing.Color.White;
             this.lblGauche.Location = new System.Drawing.Point(169, 25);
@@ -200,7 +200,7 @@
             // 
             this.btnSwitch.BackColor = System.Drawing.Color.White;
             this.btnSwitch.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSwitch.ForeColor = System.Drawing.Color.Indigo;
+            this.btnSwitch.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.btnSwitch.Location = new System.Drawing.Point(60, 805);
             this.btnSwitch.Name = "btnSwitch";
             this.btnSwitch.Size = new System.Drawing.Size(505, 68);
@@ -212,7 +212,7 @@
             // lblDroit
             // 
             this.lblDroit.AutoSize = true;
-            this.lblDroit.BackColor = System.Drawing.Color.Indigo;
+            this.lblDroit.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.lblDroit.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDroit.ForeColor = System.Drawing.Color.White;
             this.lblDroit.Location = new System.Drawing.Point(436, 25);
@@ -224,7 +224,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Indigo;
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.lblGauche);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -233,7 +233,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Indigo;
+            this.panel3.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel3.Controls.Add(this.lblDroit);
             this.panel3.Location = new System.Drawing.Point(630, 0);
             this.panel3.Name = "panel3";
@@ -257,7 +257,7 @@
             // 
             // btnAjouter
             // 
-            this.btnAjouter.BackColor = System.Drawing.Color.Indigo;
+            this.btnAjouter.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnAjouter.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjouter.ForeColor = System.Drawing.Color.White;
             this.btnAjouter.Location = new System.Drawing.Point(60, 635);
@@ -373,7 +373,7 @@
             this.picRefresh.TabStop = false;
             this.picRefresh.Click += new System.EventHandler(this.picRefresh_Click);
             // 
-            // GestionPersonnel
+            // frmGestionPersonnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -407,7 +407,9 @@
             this.Controls.Add(this.lblNom);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "GestionPersonnel";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmGestionPersonnel";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 25, 30);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MediaTek Management";

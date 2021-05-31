@@ -49,11 +49,12 @@
             Curseur objet
             </summary>
         </member>
-        <member name="M:MediaTek.connexion.ConnexionBDD.ReqSelect(System.String)">
+        <member name="M:MediaTek.connexion.ConnexionBDD.ReqSelect(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
             <summary>
             Exécution d'une requête type "SELECT" et valorisation du curseur
             </summary>
             <param name="stringQuery">requête "SELECT"</param>
+            <param name="parameters"></param>
         </member>
         <member name="M:MediaTek.connexion.ConnexionBDD.Read">
             <summary>
@@ -78,10 +79,24 @@
             Gère les intéractions entre le modèle et la vue
             </summary>
         </member>
+        <member name="F:MediaTek.controleur.Controle.frmLogin">
+            <summary>
+            Fenêtre d'authentification
+            </summary>
+        </member>
         <member name="M:MediaTek.controleur.Controle.#ctor">
             <summary>
             Ouverture de la fenêtre
             </summary>
+        </member>
+        <member name="M:MediaTek.controleur.Controle.Authentification(System.String,System.String)">
+            <summary>
+            Demande la vérification de l'authentification
+            Si login/pwd sont corrects, ouverture de la fenêtre principale
+            </summary>
+            <param name="login"></param>
+            <param name="pwd"></param>
+            <returns></returns>
         </member>
         <member name="M:MediaTek.controleur.Controle.GetLesPersonnels">
             <summary>
@@ -149,6 +164,14 @@
             <summary>
             Chaine de connexion à la BDD
             </summary>
+        </member>
+        <member name="M:MediaTek.dal.AccesDonnees.Authentification(System.String,System.String)">
+            <summary>
+            Authentification (login/pwd)
+            </summary>
+            <param name="login"></param>
+            <param name="pwd"></param>
+            <returns></returns>
         </member>
         <member name="M:MediaTek.dal.AccesDonnees.GetLesPersonnels">
             <summary>
@@ -386,24 +409,55 @@
               Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
-        <member name="F:MediaTek.vue.Login.components">
+        <member name="T:MediaTek.vue.frmLogin">
+            <summary>
+            Fenêtre d'authentification
+            </summary>
+        </member>
+        <member name="F:MediaTek.vue.frmLogin.controle">
+            <summary>
+            Instance du controleur
+            </summary>
+        </member>
+        <member name="M:MediaTek.vue.frmLogin.#ctor(MediaTek.controleur.Controle)">
+            <summary>
+            Initialisation des composants graphiques
+            Récupération du contrôleur
+            </summary>
+            <param name="controle"></param>
+        </member>
+        <member name="M:MediaTek.vue.frmLogin.chkboxPwd_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Affiche/Cache le mot de passe
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MediaTek.vue.frmLogin.btnSeConnecter_Click(System.Object,System.EventArgs)">
+            <summary>
+            Contrôle l'authentification
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:MediaTek.vue.frmLogin.components">
             <summary>
             Variable nécessaire au concepteur.
             </summary>
         </member>
-        <member name="M:MediaTek.vue.Login.Dispose(System.Boolean)">
+        <member name="M:MediaTek.vue.frmLogin.Dispose(System.Boolean)">
             <summary>
             Nettoyage des ressources utilisées.
             </summary>
             <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
         </member>
-        <member name="M:MediaTek.vue.Login.InitializeComponent">
+        <member name="M:MediaTek.vue.frmLogin.InitializeComponent">
             <summary>
             Méthode requise pour la prise en charge du concepteur - ne modifiez pas
             le contenu de cette méthode avec l'éditeur de code.
             </summary>
         </member>
-        <member name="T:MediaTek.vue.GestionPersonnel">
+        <member name="T:MediaTek.vue.frmGestionPersonnel">
             <summary>
             Fenêtre d'affichage des personnels et de leurs informations
             </summary>
@@ -411,91 +465,91 @@
             Classe Designer : création des composants graphiques
             </summary>
         </member>
-        <member name="F:MediaTek.vue.GestionPersonnel.controle">
+        <member name="F:MediaTek.vue.frmGestionPersonnel.controle">
             <summary>
             Instance du controleur
             </summary>
         </member>
-        <member name="F:MediaTek.vue.GestionPersonnel.bsPersonnels">
+        <member name="F:MediaTek.vue.frmGestionPersonnel.bsPersonnels">
             <summary>
             Objet pour gérer la liste des personnels
             </summary>
         </member>
-        <member name="F:MediaTek.vue.GestionPersonnel.bsServices">
+        <member name="F:MediaTek.vue.frmGestionPersonnel.bsServices">
             <summary>
             Objet pour gérer la liste des services
             </summary>
         </member>
-        <member name="F:MediaTek.vue.GestionPersonnel.bsAbsences">
+        <member name="F:MediaTek.vue.frmGestionPersonnel.bsAbsences">
             <summary>
             Objet pour gérer la liste des absences
             </summary>
         </member>
-        <member name="F:MediaTek.vue.GestionPersonnel.bsMotifs">
+        <member name="F:MediaTek.vue.frmGestionPersonnel.bsMotifs">
             <summary>
             Objet pour gérer la liste des motifs
             </summary>
         </member>
-        <member name="F:MediaTek.vue.GestionPersonnel.show">
+        <member name="F:MediaTek.vue.frmGestionPersonnel.show">
             <summary>
             Booléen pour déterminer l'affichage :
             - GESTION DU PERSONNEL
             - GESTION DES ABSENCES
             </summary>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.#ctor(MediaTek.controleur.Controle)">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.#ctor(MediaTek.controleur.Controle)">
             <summary>
             Initialisation des composants graphiques
             Récupération du controleur
             </summary>
             <param name="controle"></param>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.Init">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.Init">
             <summary>
             Initialisation : GESTION DU PERSONNEL
             </summary>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.ShowComponents(System.Boolean)">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.ShowComponents(System.Boolean)">
             <summary>
             Affiche/Cache les composants graphiques
             </summary>
             <param name="show"></param>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.RemplirDGVPersonnels">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.RemplirDGVPersonnels">
             <summary>
             Affiche les personnels
             </summary>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.RemplirCboServices">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.RemplirCboServices">
             <summary>
             Affiche les services
             </summary>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.RemplirDGVAbsences">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.RemplirDGVAbsences">
             <summary>
             Affiche les absences
             </summary>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.RemplirCboMotifs">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.RemplirCboMotifs">
             <summary>
             Affiche les motifs 
             </summary>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.dgvPersonnels_CellEnter(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.dgvPersonnels_CellEnter(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
             <summary>
             Affiche les informations du personnel sélectionné
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.dgvAbsences_CellEnter(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.dgvAbsences_CellEnter(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
             <summary>
             Affiche le détail de l'absence
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.btnAjouter_Click(System.Object,System.EventArgs)">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.btnAjouter_Click(System.Object,System.EventArgs)">
             <summary>
             Demande d'ajout
             Condition : tous les champs doivent être remplis
@@ -503,7 +557,7 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.btnSupprimer_Click(System.Object,System.EventArgs)">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.btnSupprimer_Click(System.Object,System.EventArgs)">
             <summary>
             Demande de suppression
             Condition : une ligne doit être sélectionnée
@@ -511,7 +565,7 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.btnModifier_Click(System.Object,System.EventArgs)">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.btnModifier_Click(System.Object,System.EventArgs)">
             <summary>
             Demande de modification
             Condition : une ligne doit être sélectionnée
@@ -519,26 +573,26 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.picRefresh_Click(System.Object,System.EventArgs)">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.picRefresh_Click(System.Object,System.EventArgs)">
             <summary>
             Mise à jour des données provenant de la BDD
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.btnVider_Click(System.Object,System.EventArgs)">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.btnVider_Click(System.Object,System.EventArgs)">
             <summary>
             Vide les champs
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.Vider">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.Vider">
             <summary>
             Vide les champs
             </summary>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.btnSwitch_Click(System.Object,System.EventArgs)">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.btnSwitch_Click(System.Object,System.EventArgs)">
             <summary>
             Affiche les bons composants graphiques
             Condition : une ligne doit être sélectionnée pour basculer sur la gestion des absences
@@ -546,18 +600,18 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="F:MediaTek.vue.GestionPersonnel.components">
+        <member name="F:MediaTek.vue.frmGestionPersonnel.components">
             <summary>
             Variable nécessaire au concepteur.
             </summary>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.Dispose(System.Boolean)">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.Dispose(System.Boolean)">
             <summary>
             Nettoyage des ressources utilisées.
             </summary>
             <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
         </member>
-        <member name="M:MediaTek.vue.GestionPersonnel.InitializeComponent">
+        <member name="M:MediaTek.vue.frmGestionPersonnel.InitializeComponent">
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
