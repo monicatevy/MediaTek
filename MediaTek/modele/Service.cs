@@ -1,11 +1,20 @@
 ﻿namespace MediaTek.modele
 {
+    /// <summary>
+    /// Classe métier correspondant à la table "Service" de la base de données
+    /// </summary>
     public class Service
     {
         private int idservice;
         private string nom;
 
+        /// <summary>
+        /// Getter : idservice
+        /// </summary>
         public int Idservice { get => idservice; }
+        /// <summary>
+        /// Getter : nom
+        /// </summary>
         public string Nom { get => nom; }
 
         /// <summary>

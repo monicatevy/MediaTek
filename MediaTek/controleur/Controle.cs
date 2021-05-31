@@ -39,7 +39,7 @@ namespace MediaTek.controleur
         /// <summary>
         /// Demande d'ajout d'un personnel
         /// </summary>
-        /// <param name="personnel"></param>
+        /// <param name="personnel">objet de type personnel à ajouter</param>
         public void AddPersonnel(Personnel personnel)
         {
             AccesDonnees.AddPersonnel(personnel);
@@ -48,7 +48,7 @@ namespace MediaTek.controleur
         /// <summary>
         /// Demande de suppression d'un personnel
         /// </summary>
-        /// <param name="personnel"></param>
+        /// <param name="idpersonnel">id du personnel à supprimer</param>
         public void DelPersonnel(int idpersonnel)
         {
             AccesDonnees.DelPersonnel(idpersonnel);
@@ -57,7 +57,7 @@ namespace MediaTek.controleur
         /// <summary>
         /// Demande de modification d'un personnel
         /// </summary>
-        /// <param name="personnel"></param>
+        /// <param name="personnel">objet de type personnel à modifier</param>
         public void UpdatePersonnel(Personnel personnel)
         {
             AccesDonnees.UpdatePersonnel(personnel);
@@ -66,6 +66,7 @@ namespace MediaTek.controleur
         /// <summary>
         /// Récupère et retourne les infos des absences provenant de la BDD
         /// </summary>
+        /// <param name="idpersonnel">id du personnel dont les informations sont récupérées</param>
         /// <returns>liste des absences</returns>
         public List<Absence> GetLesAbsences(int idpersonnel)
         {
@@ -84,7 +85,8 @@ namespace MediaTek.controleur
         /// <summary>
         /// Demande d'ajout d'une absence
         /// </summary>
-        /// <param name="personnel"></param>
+        /// <param name="absence">objet de type absence à ajouter</param>
+        /// <param name="idpersonnel">id du personnel à qui on ajoute une absence</param>
         public void AddAbsence(Absence absence, int idpersonnel)
         {
             AccesDonnees.AddAbsence(absence, idpersonnel);
@@ -93,7 +95,8 @@ namespace MediaTek.controleur
         /// <summary>
         /// Demande de suppression d'une absence
         /// </summary>
-        /// <param name="personnel"></param>
+        /// <param name="absence">objet de type absence à supprimer</param>
+        /// <param name="idpersonnel">id du personnel à qui on supprime une absence</param>
         public void DelAbsence(Absence absence, int idpersonnel)
         {
             AccesDonnees.DelAbsence(absence, idpersonnel);

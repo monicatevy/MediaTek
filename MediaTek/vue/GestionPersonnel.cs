@@ -7,6 +7,9 @@ using System.Windows.Forms;
 
 namespace MediaTek.vue
 {
+    /// <summary>
+    /// Fenêtre d'affichage des personnels et de leurs informations
+    /// </summary>
     public partial class GestionPersonnel : Form
     {
         /// <summary>

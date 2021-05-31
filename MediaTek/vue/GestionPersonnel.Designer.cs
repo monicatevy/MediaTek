@@ -1,16 +1,19 @@
 ﻿namespace MediaTek.vue
 {
+    /// <summary>
+    /// Classe Designer : création des composants graphiques
+    /// </summary>
     partial class GestionPersonnel
     {
         /// <summary>
-        /// Required designer variable.
+        /// Variable nécessaire au concepteur.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Nettoyage des ressources utilisées.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -48,7 +51,6 @@
             this.dgvPersonnels = new System.Windows.Forms.DataGridView();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.btnVider = new System.Windows.Forms.Button();
-            this.picRefresh = new System.Windows.Forms.PictureBox();
             this.cboMotifs = new System.Windows.Forms.ComboBox();
             this.lblMotif = new System.Windows.Forms.Label();
             this.DPickDebut = new System.Windows.Forms.DateTimePicker();
@@ -56,11 +58,12 @@
             this.lblDateFin = new System.Windows.Forms.Label();
             this.lblDateDebut = new System.Windows.Forms.Label();
             this.dgvAbsences = new System.Windows.Forms.DataGridView();
+            this.picRefresh = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonnels)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAbsences)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNom
@@ -278,18 +281,6 @@
             this.btnVider.UseVisualStyleBackColor = false;
             this.btnVider.Click += new System.EventHandler(this.btnVider_Click);
             // 
-            // picRefresh
-            // 
-            this.picRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picRefresh.Image = global::MediaTek.Properties.Resources.refresh_pp;
-            this.picRefresh.Location = new System.Drawing.Point(407, 412);
-            this.picRefresh.Name = "picRefresh";
-            this.picRefresh.Size = new System.Drawing.Size(60, 45);
-            this.picRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picRefresh.TabIndex = 29;
-            this.picRefresh.TabStop = false;
-            this.picRefresh.Click += new System.EventHandler(this.picRefresh_Click);
-            // 
             // cboMotifs
             // 
             this.cboMotifs.FormattingEnabled = true;
@@ -370,6 +361,18 @@
             this.dgvAbsences.TabIndex = 55;
             this.dgvAbsences.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAbsences_CellEnter);
             // 
+            // picRefresh
+            // 
+            this.picRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picRefresh.Image = global::MediaTek.Properties.Resources.refresh;
+            this.picRefresh.Location = new System.Drawing.Point(407, 412);
+            this.picRefresh.Name = "picRefresh";
+            this.picRefresh.Size = new System.Drawing.Size(60, 45);
+            this.picRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picRefresh.TabIndex = 29;
+            this.picRefresh.TabStop = false;
+            this.picRefresh.Click += new System.EventHandler(this.picRefresh_Click);
+            // 
             // GestionPersonnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -413,8 +416,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonnels)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAbsences)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

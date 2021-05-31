@@ -1,11 +1,21 @@
 ﻿namespace MediaTek.modele
 {
+    /// <summary>
+    /// Classe métier correspondant à la table "Motif" de la base de données
+    /// </summary>
     public class Motif
     {
         private int idmotif;
         private string libelle;
 
+        /// <summary>
+        /// Getter : idmotif
+        /// </summary>
         public int Idmotif { get => idmotif; }
+
+        /// <summary>
+        /// Getter : libelle
+        /// </summary>
         public string Libelle { get => libelle; }
 
         /// <summary>
