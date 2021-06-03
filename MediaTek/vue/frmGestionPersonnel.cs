@@ -217,12 +217,12 @@ namespace MediaTek.vue
                     {
                         dgvPersonnels.ClearSelection();
                         Vider();
-                        MessageBox.Show("L'utilisateur a été ajouté avec succès.", "Information");
+                        MessageBox.Show("Le personnel a été ajouté avec succès.", "Information");
                     }
                     else
                     {
                         // La combinaison (nom, prénom) existe dans la BDD
-                        MessageBox.Show("Cet utilisateur existe déjà.", "Information");
+                        MessageBox.Show("Ce personnel existe déjà.", "Information");
                     }
                 }
                 else
@@ -340,7 +340,7 @@ namespace MediaTek.vue
                     Personnel personnel = (Personnel)bsPersonnels.List[bsPersonnels.Position];
                     personnel = new Personnel(personnel.Idpersonnel, txtNom.Text, txtPrenom.Text, txtTel.Text, txtEmail.Text, service.Idservice, service.Nom);
 
-                    if (MessageBox.Show("Voulez-vous modifier les informations concernant cet utilisateur ?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("Voulez-vous modifier les informations concernant ce personnel ?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         controle.UpdatePersonnel(personnel);
                         RemplirDGVPersonnels();
@@ -349,7 +349,7 @@ namespace MediaTek.vue
                         if (!(txtNom.Text.Contains(personnel.Nom) && txtPrenom.Text.Contains(personnel.Prenom)))
                         {
                             // La combinaison (nom, prénom) existe dans la BDD
-                            MessageBox.Show("Cet utilisateur existe déjà.","Information");
+                            MessageBox.Show("Ce personnel existe déjà.","Information");
                         }
 
                         // Sélectionne l'élément modifié ou à modifier (idpersonnel)

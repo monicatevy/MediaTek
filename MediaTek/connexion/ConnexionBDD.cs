@@ -28,7 +28,7 @@ namespace MediaTek.connexion
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Erreur");
+                Console.WriteLine(e.Message);
                 Application.Exit();
             }
         }
@@ -76,7 +76,7 @@ namespace MediaTek.connexion
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Erreur");
+                Console.WriteLine(e.Message);
             }
         }
 
@@ -107,7 +107,7 @@ namespace MediaTek.connexion
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Erreur");
+                Console.WriteLine(e.Message);
             }
         }
 
