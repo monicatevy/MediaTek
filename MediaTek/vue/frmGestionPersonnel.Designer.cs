@@ -380,7 +380,6 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1810, 929);
-            this.Controls.Add(this.dgvAbsences);
             this.Controls.Add(this.cboMotifs);
             this.Controls.Add(this.lblMotif);
             this.Controls.Add(this.DPickDebut);
@@ -406,6 +405,7 @@
             this.Controls.Add(this.txtNom);
             this.Controls.Add(this.lblNom);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dgvAbsences);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
