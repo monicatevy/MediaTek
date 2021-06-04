@@ -33,3 +33,7 @@ C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.c
 C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\MediaTek.xml
 C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.vue.frmGestionPersonnel.resources
 C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.vue.frmLogin.resources
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\MediaTek.exe.manifest
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\bin\Debug\MediaTek.application
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.exe.manifest
+C:\Users\Monica Tevy Sen\Desktop\MediaTek\MediaTek\MediaTek\obj\Debug\MediaTek.application
